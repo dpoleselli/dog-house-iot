@@ -1,0 +1,4 @@
+images/
+__pycache__/
+service_account.json
+
