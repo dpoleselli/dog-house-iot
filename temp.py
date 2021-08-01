@@ -1,4 +1,5 @@
 import Adafruit_DHT
+import os
 import time
 import datetime
 import gspread
@@ -21,7 +22,7 @@ def get_temp():
 def process_temp(interval=60):
     ip = get('https://api.ipify.org').text
     latlong = get('https://ipapi.co/{}/latlong/'.format(ip)).text.split(',')
-    WEATHER_KEY = os.env.get("OPEN_WEATHER_API")
+    WEATHER_KEY = os.environ.get('OPEN_WEATHER_KEY')
 
     gc = gspread.service_account(filename='./service_account.json')
 

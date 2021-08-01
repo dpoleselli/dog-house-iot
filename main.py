@@ -28,7 +28,7 @@ while True:
     if GPIO.input(PIR_PIN):
         now = datetime.datetime.now().isoformat()
         print(now + ": motion detected")
-        print("current temp = " + str(status.current_temp)
+        print("current temp = " + str(status.current_temp))
 
         camera.start_preview()
         time.sleep(1)
