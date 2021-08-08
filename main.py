@@ -22,7 +22,7 @@ GPIO.setup(PIR_PIN, GPIO.IN)
 Process(target=process_temp, name="process temp").start()
 
 camera = PiCamera()
-Status.instance()
+status = Status.instance()
 
 while True:
     if GPIO.input(PIR_PIN):
